@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resume — Ivan Piven</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Кнопка переключения языка — фиксированная в правом верхнем углу -->
+  <div class="lang-switcher">
+    <button class="lang-btn active" onclick="setLang('en', this)">EN</button>
+    <span class="lang-divider">/</span>
+    <button class="lang-btn" onclick="setLang('ua', this)">UA</button>
+  </div>
+
+  <!-- Боковая навигация -->
+  <nav class="side-nav">
+    <a href="#about" data-en="About"    data-ua="Про мене">About</a>
+    <a href="#projects" data-en="Projects" data-ua="Проєкти">Projects</a>
+    <a href="#skills"   data-en="Skills"   data-ua="Навички">Skills</a>
+  </nav>
+
+  <!-- Основной контент -->
+  <div class="wrapper">
+
+    <!-- ─── HERO ─── -->
+    <section class="hero" id="about">
+
+      <p class="hero-label"
+         data-en="Resume · 2026"
+         data-ua="Резюме · 2026">Resume · 2026</p>
+
+      <h1>Ivan<br><em>Piven</em></h1>
+
+      <p class="hero-title"
+         data-en="Vibe Coder · Junior Frontend"
+         data-ua="Вайб Кодер · Junior Frontend">Vibe Coder · Junior Frontend</p>
+
+      <p class="hero-bio"
+         data-en="I build interfaces with vibes. No years of experience — just curiosity, Claude, and a good eye for design. I write HTML and CSS, work from Figma mockups, and ship things that actually look good. Currently leveling up in JavaScript."
+         data-ua="Я будую інтерфейси за відчуттям. Без років досвіду — лише цікавість, Claude і добре відчуття дизайну. Пишу HTML і CSS, працюю з макетами у Figma та роблю речі, які справді виглядають гарно. Зараз підтягую JavaScript.">
+        I build interfaces with vibes. No years of experience — just curiosity, Claude, and a good eye for design. I write HTML and CSS, work from Figma mockups, and ship things that actually look good. Currently leveling up in JavaScript.
+      </p>
+
+      <div class="contacts">
+        <!-- Кнопка копирует email в буфер обмена вместо открытия почтового клиента -->
+        <button class="email-copy" onclick="copyEmail(this)">broazeare@gmail.com</button>
+        <a href="https://github.com/broazeare" target="_blank">GitHub</a>
+        <span class="location"
+              data-en="Dnipro"
+              data-ua="Дніпро">Dnipro</span>
+      </div>
+
+    </section>
+
+    <hr class="divider" />
+
+    <!-- ─── PROJECTS ─── -->
+    <section class="section" id="projects">
+
+      <div class="section-header">
+        <span class="section-num">01 —</span>
+        <span class="section-title"
+              data-en="Projects"
+              data-ua="Проєкти">Projects</span>
+      </div>
+
+      <!-- Проект 1 -->
+      <div class="project">
+        <div class="project-meta">
+          <p class="project-date"
+             data-en="January 2026"
+             data-ua="Січень 2026">Janury 2026</p>
+          <a href="https://broazeare.github.io/Coffee-landing/" target="_blank" class="project-link"
+             data-en="View"
+             data-ua="Переглянути">View</a>
+        </div>
+        <div class="project-content">
+          <p class="project-name"
+             data-en="Coffee Shop Landing"
+             data-ua="Лендінг кав'ярні">Coffee Shop Landing</p>
+          <p class="project-desc"
+             data-en="Pixel-perfect landing built from a Figma mockup. Fully responsive, smooth anchor scrolling, Google Fonts connected. Looks exactly like the design."
+             data-ua="Лендінг з точністю до пікселя за макетом у Figma. Повністю адаптивний, плавне прокручування, підключені Google Fonts. Виглядає точно як в дизайні.">
+            Pixel-perfect landing built from a Figma mockup. Fully responsive, smooth anchor scrolling, Google Fonts connected. Looks exactly like the design.
+          </p>
+          <div class="project-tags">
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">Flexbox</span>
+            <span class="tag" data-en="Responsive" data-ua="Адаптив">Responsive</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Проект 2 -->
+      <div class="project">
+        <div class="project-meta">
+          <p class="project-date"
+             data-en="March 2026"
+             data-ua="Март 2026">March 2026</p>
+          <a href="#" class="project-link"
+             data-en="View"
+             data-ua="Переглянути">View</a>
+        </div>
+        <div class="project-content">
+          <p class="project-name"
+             data-en="Portfolio Page"
+             data-ua="Сторінка портфоліо">Portfolio Page</p>
+          <p class="project-desc"
+             data-en="Personal site with About, Skills, and Contact sections. CSS Grid layout, custom properties for theming, clean minimal aesthetic."
+             data-ua="Особистий сайт з розділами Про мене, Навички та Контакти. CSS Grid, змінні для теми, мінімалістична естетика.">
+            Personal site with About, Skills, and Contact sections. CSS Grid layout, custom properties for theming, clean minimal aesthetic.
+          </p>
+          <div class="project-tags">
+            <span class="tag">HTML</span>
+            <span class="tag">CSS Grid</span>
+            <span class="tag" data-en="CSS Variables" data-ua="CSS-змінні">CSS Variables</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Проект 3 -->
+      <div class="project">
+        <div class="project-meta">
+          <p class="project-date"
+             data-en="March 2026"
+             data-ua="Март 2026">March 2026</p>
+          <a href="https://broazeare.github.io/Product-Cards/" target="_blank" class="project-link"
+             data-en="View"
+             data-ua="Переглянути">View</a>
+        </div>
+        <div class="project-content">
+          <p class="project-name"
+             data-en="Product Cards UI"
+             data-ua="UI карток товарів">Product Cards UI</p>
+          <p class="project-desc"
+             data-en="Reusable card grid with images, titles, and prices. Practiced BEM naming and smooth hover effects with CSS transitions."
+             data-ua="Сітка карток з зображеннями, назвами та цінами. Практикував БЕМ та плавні hover-ефекти через CSS transitions.">
+            Reusable card grid with images, titles, and prices. Practiced BEM naming and smooth hover effects with CSS transitions.
+          </p>
+          <div class="project-tags">
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">BEM</span>
+            <span class="tag">Transitions</span>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ─── SKILLS ─── -->
+    <section class="section" id="skills">
+
+      <div class="section-header">
+        <span class="section-num">02 —</span>
+        <span class="section-title"
+              data-en="Skills"
+              data-ua="Навички">Skills</span>
+      </div>
+
+      <div class="skills-grid">
+        <div class="skill-card">
+          <p class="skill-name">HTML5</p>
+          <p class="skill-sub"
+             data-en="Semantics · Forms"
+             data-ua="Семантика · Форми">Semantics · Forms</p>
+        </div>
+        <div class="skill-card">
+          <p class="skill-name">CSS3</p>
+          <p class="skill-sub"
+             data-en="Flexbox · Grid · Animations"
+             data-ua="Flexbox · Grid · Анімації">Flexbox · Grid · Animations</p>
+        </div>
+        <div class="skill-card">
+          <p class="skill-name">Figma</p>
+          <p class="skill-sub"
+             data-en="Mockups · Design systems"
+             data-ua="Макети · Дизайн-системи">Mockups · Design systems</p>
+        </div>
+        <div class="skill-card">
+          <p class="skill-name">VS Code</p>
+          <p class="skill-sub"
+             data-en="Main editor"
+             data-ua="Основний редактор">Main editor</p>
+        </div>
+      </div>
+
+      <!-- Currently learning -->
+      <div class="learning">
+        <p class="learning-label"
+           data-en="Currently learning"
+           data-ua="Зараз вивчаю">Currently learning</p>
+        <p class="learning-text"
+           data-en="JavaScript — variables, functions, DOM. Also using Claude to move faster and understand what I'm building. Vibe coding is real coding."
+           data-ua="JavaScript — змінні, функції, DOM. Також використовую Claude, щоб рухатися швидше і розуміти те, що будую. Вайб-кодинг — це справжній кодинг.">
+          JavaScript — variables, functions, DOM. Also using Claude to move faster and understand what I'm building. Vibe coding is real coding.
+        </p>
+      </div>
+
+    </section>
+
+    <!-- ─── FOOTER ─── -->
+    <footer>
+      <p class="footer-name">Ivan Piven</p>
+      <p class="footer-copy"
+         data-en="Open to work · 2026"
+         data-ua="Готовий до роботи · 2026">Open to work · 2026</p>
+    </footer>
+
+  </div>
+
+  <script>
+    /*
+      Функция переключения языка.
+      Принимает: lang ('en' или 'ua'), btn — кнопка которую нажали.
+
+      Как работает:
+      1. Убирает класс active у всех кнопок, ставит на нажатую.
+      2. Находит все элементы у которых есть атрибут data-en.
+      3. Берёт из нужного атрибута текст и вставляет в элемент.
+    */
+    /*
+      Копирует email в буфер обмена.
+      На секунду меняет текст кнопки на "Copied!" — чтобы пользователь понял что произошло.
+    */
+    function copyEmail(btn) {
+      navigator.clipboard.writeText('broazeare@gmail.com');
+      var original = btn.textContent;
+      btn.textContent = 'Copied!';
+      btn.style.color = 'var(--color-accent)';
+      setTimeout(function() {
+        btn.textContent = original;
+        btn.style.color = '';
+      }, 1500);
+    }
+
+    function setLang(lang, btn) {
+
+      /* Переключаем активную кнопку */
+      document.querySelectorAll('.lang-btn').forEach(function(b) {
+        b.classList.remove('active');
+      });
+      btn.classList.add('active');
+
+      /* Переключаем текст всех переводимых элементов */
+      document.querySelectorAll('[data-en]').forEach(function(el) {
+        el.textContent = el.getAttribute('data-' + lang);
+      });
+    }
+  </script>
+
+</body>
+</html>
